@@ -1,5 +1,5 @@
 def make_average0():
-    series = [] #这是没有被初始化的，所以不会被当作局部变量。当作自由变量。
+    series = [] #这是没有被赋值的，所以不会被当作局部变量。当作自由变量。
 
     def averager(new_value):
         series.append(new_value)
@@ -9,7 +9,7 @@ def make_average0():
     return averager
 
 def make_average1():
-    count = 0 #初始化了就被当作局部变量，作用域在局部。
+    count = 0 #初赋值了就被当作局部变量，作用域在局部。
     total = 0
 
     def averager(new_value):
